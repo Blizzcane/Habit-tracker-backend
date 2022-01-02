@@ -4,7 +4,7 @@ exports.up = function(knex) {
         table.increments("habit_id").primary();
         table.string("habit_name");
         table.boolean("habit_completed");
-        table.string("habit_days"); 
+        table.string("habit_frequency"); 
     });
 };
 
