@@ -7,9 +7,15 @@ exports.seed = function (knex) {
       return knex("habits").insert([
         { 
           habit_id: 1,
-          habit_name: "Workout",
-          habit_completed: false,
+          habit_name: "Exercise",
+          habit_completed: true,
           habit_frequency: "Mon, Tue, Wed",
+        },
+        { 
+          habit_id: 2,
+          habit_name: "Read",
+          habit_completed: false,
+          habit_frequency: "Mon, Tue, Wed, Fri, Sat",
         },
       ]);
     });
