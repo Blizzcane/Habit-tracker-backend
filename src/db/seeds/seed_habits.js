@@ -5,17 +5,17 @@ exports.seed = function (knex) {
     .then(function () {
       // Inserts seed entries
       return knex("habits").insert([
-        { 
+        {
           habit_id: 1,
           habit_name: "Exercise",
-          habit_completed: true,
-          habit_frequency: "Mon, Tue, Wed",
-        },
-        { 
-          habit_id: 2,
-          habit_name: "Read",
-          habit_completed: false,
-          habit_frequency: "Mon, Tue, Wed, Fri, Sat",
+          description: "description here",
+          Sun: true,
+          Mon: true,
+          Tue: false,
+          Wed: true,
+          Thu: true,
+          Fri: false,
+          Sat: true,
         },
       ]);
     });
