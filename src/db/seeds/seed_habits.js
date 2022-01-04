@@ -16,6 +16,7 @@ exports.seed = function (knex) {
           Thu: true,
           Fri: false,
           Sat: true,
+          habit_color: "923232"
         },
       ]);
     });
