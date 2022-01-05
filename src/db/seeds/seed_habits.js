@@ -12,7 +12,7 @@ exports.seed = function (knex) {
           Sun: true,
           Mon: true,
           Tue: false,
-          Wed: true,
+          Wed: null,
           Thu: true,
           Fri: false,
           Sat: true,
