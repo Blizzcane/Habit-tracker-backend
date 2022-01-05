@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 const habitsRouter = require("./habits/habits.router"); 
 
+app.use(cors());
 app.use(express.json());
 
 app.use("/habits", habitsRouter); 
