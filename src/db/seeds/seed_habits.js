@@ -16,7 +16,20 @@ exports.seed = function (knex) {
           Thu: true,
           Fri: false,
           Sat: true,
-          habit_color: "923232"
+          habit_color: "923232",
+        },
+        {
+          habit_id: 2,
+          habit_name: "Reading",
+          description: "Reading books",
+          Sun: false,
+          Mon: false,
+          Tue: false,
+          Wed: true,
+          Thu: true,
+          Fri: true,
+          Sat: true,
+          habit_color: "f2f2aa",
         },
       ]);
     });
