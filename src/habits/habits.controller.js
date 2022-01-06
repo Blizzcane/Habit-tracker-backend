@@ -7,10 +7,9 @@ function list(req, res, next) {
     .catch(next);
 }
 
-function getDailyHabits(req, res, next) {
-  console.log(req.body);
+function getDailyHabits(req, res, next) { 
   habitsService
-    .daily(req.body)
+    .daily(req.params.day)
     .then((data) => res.json({ data }))
     .catch(next);
 }

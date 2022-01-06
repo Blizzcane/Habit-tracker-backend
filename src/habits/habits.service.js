@@ -4,12 +4,11 @@ function list() {
   return knex("habits").select("*");
 }
 
-function daily(day) {
-  console.log("day",day);
-  return knex("habits").select("*").havingNotNull(day);
+function daily(day) {  
+  return knex("habits").select("*").whereNot(day, null);
 }
 
 module.exports = {
   list,
-  daily
+  daily,
 };
