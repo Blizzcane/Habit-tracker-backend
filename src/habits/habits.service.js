@@ -15,7 +15,7 @@ function updateCompletion(habit) {
 
   return knex("habits").where({ habit_id: id }).update(day, status);
 }
-
+ 
 module.exports = {
   list,
   daily,

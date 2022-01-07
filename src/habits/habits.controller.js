@@ -16,7 +16,7 @@ function getDailyHabits(req, res, next) {
 
 async function updateHabitCompletion(req, res, next) {
   console.log("controller")
-  console.log(req.body.data);
+  console.log(req.body);
 
   await habitsService.updateCompletion(
     req.body.data
