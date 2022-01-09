@@ -9,7 +9,7 @@ function listHabit(id) {
 }
 
 function daily(day) {
-  return knex("habits").select("*").whereNot(day, null);
+  return knex("habits").select("*").whereNot(day, null).orderBy('habit_id');
 }
 
 function updateCompletion(habit) {
