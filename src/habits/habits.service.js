@@ -9,15 +9,21 @@ function daily(day) {
 }
 
 function updateCompletion(habit) {
-  const { id, day, status } = habit;
-  console.log(habit);
-  console.log("service");
+  const { id, day, status } = habit; 
 
   return knex("habits").where({ habit_id: id }).update(day, status);
+}
+
+function create(habit) {
+  return knex("habits")
+  .insert(habit)
+  .returning("*")
+  .then((createdHabits) => createdHabits[0]);
 }
  
 module.exports = {
   list,
   daily,
   updateCompletion,
+  create
 };
