@@ -36,9 +36,15 @@ async function createHabit(req, res, next) {
   res.status(201).json({ data: response[0] });
 }
 
+async function destroy(req, res) { 
+  await service.deleteHabit(res.params.id);
+  res.status(200) 
+}
+
 module.exports = {
   list,
   getHabits,
   updateHabit,
   createHabit,
+  destroy
 };
