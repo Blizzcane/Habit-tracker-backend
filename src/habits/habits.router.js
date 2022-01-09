@@ -4,6 +4,8 @@ const methodNotAllowed = require("../errors/methodNotAllowed");
 
 router.route("/").get(controller.list).post(controller.createHabit).all(methodNotAllowed);
 
-router.route("/:day").get(controller.getDailyHabits).put(controller.updateHabitCompletion).all(methodNotAllowed);
-
+router.route("/:id").get(controller.getHabits).put(controller.updateHabit).all(methodNotAllowed);
+ 
+ 
 module.exports = router; 
+ 
